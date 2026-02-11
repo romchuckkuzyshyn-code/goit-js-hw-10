@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-BGUIiSBJ.css">
+
+    <script type="module" crossorigin src="/vanilla-app-template/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/vendor-CZjNVMTf.css">
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-Dk8VldZH.css">
   </head>
   <body>
     <header class="header">
@@ -35,22 +40,34 @@
       <form class="form">
         <label>
           Delay (ms)
-          <input type="number" name="delay" required />
+          <input type="number" name="delay" class="inp-styles" required />
         </label>
 
         <fieldset>
           <legend>State</legend>
           <label>
-            <input type="radio" name="state" value="fulfilled" required />
+            <input
+              type="radio"
+              class="inp-styles"
+              name="state"
+              value="fulfilled"
+              required
+            />
             Fulfilled
           </label>
           <label>
-            <input type="radio" name="state" value="rejected" required />
+            <input
+              type="radio"
+              class="inp-styles"
+              name="state"
+              value="rejected"
+              required
+            />
             Rejected
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button type="submit" class="btn-start">Create notification</button>
       </form>
 
       <a class="back-link" href="./index.html">Go back</a>
