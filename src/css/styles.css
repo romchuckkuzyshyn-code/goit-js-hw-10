@@ -24,8 +24,12 @@ main {
   gap: 20px;
   margin-top: 40px;
 }
-
-#datetime-picker {
+.main-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.inp-styles {
   padding: 8px 12px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -34,8 +38,12 @@ main {
   transition: border 0.2s ease;
 }
 
-#datetime-picker:focus {
-  border-color: #4f46e5;
+.inp-styles:focus {
+  border-color: #eb0bcd;
+}
+.inp-styles:disabled {
+  background: #c7c7c7;
+  cursor: not-allowed;
 }
 
 .btn-start {
@@ -44,7 +52,7 @@ main {
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  background: #4f46e5;
+  background: #eb0bcd;
   color: white;
   transition:
     background 0.2s ease,
@@ -52,7 +60,7 @@ main {
 }
 
 .btn-start:hover:not(:disabled) {
-  background: #4338ca;
+  background: #8d0a7c;
 }
 
 .btn-start:active:not(:disabled) {
@@ -67,4 +75,42 @@ main {
 .timer {
   display: flex;
   gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 340px;
+}
+
+.form > label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.form fieldset {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 12px 14px 14px;
+}
+
+.form legend {
+  padding: 0 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.form fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-right: 16px;
 }

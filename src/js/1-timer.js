@@ -1,5 +1,5 @@
 import flatpickr from 'flatpickr';
-import izitoast from 'izitoast';
+import iziToast from 'izitoast';
 import 'flatpickr/dist/flatpickr.min.css';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -34,7 +34,7 @@ const options = {
   onClose(selectedDates) {
     userSelectedDate = Date.parse(selectedDates[0]);
     if (userSelectedDate < today) {
-      izitoast.error(toastErrorOptions);
+      iziToast.error(toastErrorOptions);
       btn.disabled = true;
       return;
     } else {
@@ -56,7 +56,7 @@ function startWorkTimer(event) {
       clearInterval(intervalID);
       btn.disabled = false;
       inputDate.disabled = false;
-      izitoast.success(toastDoneOptions);
+      iziToast.success(toastDoneOptions);
     } else {
       const { days, hours, minutes, seconds } = convertMs(result);
       daysEl.textContent = days;
