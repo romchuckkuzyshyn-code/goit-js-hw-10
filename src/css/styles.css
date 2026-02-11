@@ -46,7 +46,7 @@ main {
   cursor: not-allowed;
 }
 
-.btn-start {
+.btn {
   padding: 8px 18px;
   font-size: 14px;
   border-radius: 6px;
@@ -59,15 +59,15 @@ main {
     transform 0.1s ease;
 }
 
-.btn-start:hover:not(:disabled) {
+.btn:hover:not(:disabled) {
   background: #8d0a7c;
 }
 
-.btn-start:active:not(:disabled) {
+.btn:active:not(:disabled) {
   transform: scale(0.97);
 }
 
-.btn-start:disabled {
+.btn:disabled {
   background: #c7c7c7;
   cursor: not-allowed;
 }
