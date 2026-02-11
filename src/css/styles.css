@@ -16,3 +16,55 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+#datetime-picker {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+#datetime-picker:focus {
+  border-color: #4f46e5;
+}
+
+.btn-start {
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn-start:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.btn-start:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-start:disabled {
+  background: #c7c7c7;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  gap: 30px;
+}
