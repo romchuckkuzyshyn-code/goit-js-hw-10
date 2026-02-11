@@ -1,16 +1,20 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-let userSelectedDate;
 
+let userSelectedDate;
+const inputDate = document.querySelector('#datetime-picker');
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    userSelectedDate = selectedDates[0];
+    const today = Date.now();
+    userSelectedDate = Date.parse(selectedDates[0]);
+    if (userSelectedDate < today) {
+      return;
+    }
   },
 };
 
-const inputDate = document.querySelector('#datetime-picker');
 flatpickr(inputDate, options);
