@@ -20,7 +20,7 @@ const toastDoneOptions = {
   closeOnClick: true,
   icon: 'fa-regular fa-calendar-check',
 };
-const today = Date.now();
+
 const daysEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
@@ -33,7 +33,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     userSelectedDate = Date.parse(selectedDates[0]);
-    if (userSelectedDate < today) {
+    if (userSelectedDate <= Date.now()) {
       iziToast.error(toastErrorOptions);
       btn.disabled = true;
       return;
@@ -54,7 +54,7 @@ function startWorkTimer(event) {
     const result = userSelectedDate - Date.now();
     if (result <= 0) {
       clearInterval(intervalID);
-      btn.disabled = false;
+      // btn.disabled = false;
       inputDate.disabled = false;
       iziToast.success(toastDoneOptions);
     } else {
